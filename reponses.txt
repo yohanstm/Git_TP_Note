@@ -1,1 +1,57 @@
 
+Question 1: 
+Combien y a-t-il de branches dans ce dépôt git ? Quelle est la brance courante ? 1 point
+
+dans le dépot menus il y'a trois branch json, master et pom_xml. la branche courante est master (elle est marquée par (*))
+
+la commande c'est git branch
+
+
+
+
+Question 2:
+Qui a créé le premier commit du dépôt ? Quand a été introduit le premier test pour la classe Plat ? 1 point
+
+la personne ayant crée le premier commit est joaquin "joe". Le premier test pour la classe Plat a été fait par Hajira Lajir-Haff le tue Mar 26 18:47:24 2024
+
+la commande c'est git log 
+
+
+Question 3:
+ Quel est le dernier commit commun aux branches pom_xml et master ? Et pour les branches master et json ?  1 point
+
+le dernier git commun c'est l'ajout d'un test pour le menu.estComplet. Et pour les branches master et json c'est Changement de version de Java dans le pom.pom_xml
+
+les commandes sont git merge-base pom_xml master
+puis un git show
+
+et git merge-base master json
+puis gti show 
+
+
+
+Question 4:
+Est-ce qu’il y a des choses dans la copie de travail qui ne sont pas encore commitées ? Lesquelles ? Est-il pertinent de les commiter ? Si oui, le faire.
+oui avec git status on peut voir les fichiers non suivis tel que dans le cas ici present demain_midi.json et target/. il est pertinent de commiter demain_midi.json car c'est un fichier JSON et il est aussi pertinent de commiter le repertoir target qui vas etre utile pour les compilation jaav et json
+
+les commandes: git status
+git add
+git commit -m
+
+Question 5: 
+Faire le nécessaire pour que git ignore dorénavent les changements dans le réper- 2 points
+toire target
+
+pour repondre a cette question j'ai fais -> echo"target/" > .gitignore
+puis un git add .gitignore
+puis un commit 
+j'ai voulu le creer avec gitignore.io mais je ne trouver pas JSON, ni target donc j'en deduis que je devais le faire comme ceci .
+
+
+
+Question 6 
+Est-ce que dans l’état actuel du dépôt, tous les tests passent ? Est-ce conforme à la démarche TDD ?   1 point 
+
+nan tout les tests  ne passent pas car on a un estComplet qui boude est qui dit que l'objet n'ai pas bien définis. Nan ce n'est pas conforme a la demarche TDD car les tests ne sont pas tous passer.
+
+commande: j'ai regarder directement dans les tests 
